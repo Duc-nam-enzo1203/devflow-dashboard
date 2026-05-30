@@ -1,0 +1,152 @@
+import { Project, Partner, PlanItem, Note } from './types';
+
+export const MOCK_PROJECTS: Project[] = [
+  {
+    id: '1',
+    slug: 'e-commerce-redesign',
+    name: 'E-commerce Redesign',
+    type: 'Freelance',
+    client: 'Fashion Hub',
+    resources: ['Figma Design', 'Brand Assets'],
+    demoLink: 'https://demo.fashionhub.com',
+    liveLink: 'https://fashionhub.com',
+    hostingInfo: 'AWS EC2 / Vercel',
+    amount: 60_000_000,
+    progress: 75,
+    paymentStatus: 'Partial',
+    status: 'In Progress',
+    deadline: '2026-04-20',
+    createdAt: '2026-03-01',
+    partnerId: 'p1',
+    tasks: [
+      { id: 't1', title: 'Design System Update', status: 'Todo', priority: 'High', date: '2026-04-10' },
+      { id: 't2', title: 'API Integration', status: 'In Progress', priority: 'Medium', date: '2026-04-12' },
+      { id: 't3', title: 'User Testing', status: 'Review', priority: 'High', date: '2026-04-08' },
+    ]
+  },
+  {
+    id: '2',
+    slug: 'internal-hr-dashboard',
+    name: 'Internal HR Dashboard',
+    type: 'Corporate',
+    client: 'TechCorp Inc.',
+    resources: ['Internal API Docs', 'Legacy DB Access'],
+    demoLink: 'https://staging.hr.techcorp.com',
+    liveLink: '',
+    hostingInfo: 'Azure App Service',
+    amount: 0, // Salary based
+    progress: 40,
+    paymentStatus: 'Paid',
+    status: 'In Progress',
+    deadline: '2026-05-15',
+    createdAt: '2026-03-15',
+    partnerId: 'p2',
+    tasks: [
+      { id: 't4', title: 'Bug Fixes', status: 'Done', priority: 'Low', date: '2026-04-05' },
+      { id: 't5', title: 'Security Audit', status: 'In Progress', priority: 'High', date: '2026-04-11' },
+    ]
+  },
+  {
+    id: '3',
+    slug: 'portfolio-website',
+    name: 'Portfolio Website',
+    type: 'Freelance',
+    client: 'John Doe (Photographer)',
+    resources: ['High-res images', 'Bio text'],
+    demoLink: 'https://john-portfolio.vercel.app',
+    liveLink: 'https://johndoe.com',
+    hostingInfo: 'Netlify',
+    amount: 20_000_000,
+    progress: 100,
+    paymentStatus: 'Paid',
+    status: 'Completed',
+    deadline: '2026-03-25',
+    createdAt: '2026-02-10',
+  },
+  {
+    id: '4',
+    slug: 'saas-landing-page',
+    name: 'SaaS Landing Page',
+    type: 'Freelance',
+    client: 'Streamline AI',
+    resources: ['Copywriting doc', 'Logo SVG'],
+    demoLink: 'https://streamline-ai.framer.website',
+    liveLink: '',
+    hostingInfo: 'Framer Hosting',
+    amount: 30_000_000,
+    progress: 10,
+    paymentStatus: 'Unpaid',
+    status: 'Planning',
+    deadline: '2026-04-30',
+    createdAt: '2026-04-01',
+    partnerId: 'p1',
+  },
+];
+
+export const MOCK_PARTNERS: Partner[] = [
+  {
+    id: 'p1',
+    name: 'Alex Rivera',
+    role: 'UI/UX Designer',
+    email: 'alex@design.com',
+    zalo: '0912345678',
+    avatar: 'https://i.pravatar.cc/150?u=alex',
+    projects: ['1', '4'],
+  },
+  {
+    id: 'p2',
+    name: 'Sarah Chen',
+    role: 'Backend Developer',
+    email: 'sarah@dev.com',
+    zalo: '0987654321',
+    avatar: 'https://i.pravatar.cc/150?u=sarah',
+    projects: ['2'],
+  },
+];
+
+export const MOCK_PLAN: PlanItem[] = [
+  {
+    id: 'pl1',
+    title: 'Learn Three.js',
+    description: 'Master 3D web development for future freelance gigs.',
+    priority: 'Medium',
+    status: 'Doing',
+    date: '2026-04-10',
+  },
+  {
+    id: 'pl2',
+    title: 'Update Portfolio',
+    description: 'Add recent projects and refresh the design.',
+    priority: 'High',
+    status: 'Todo',
+    date: '2026-04-15',
+  },
+];
+
+export const MOCK_NOTES: Note[] = [
+  {
+    id: 'n1',
+    title: 'API Keys - Staging',
+    content: 'Staging environment keys for TechCorp project: \n- STRIPE_KEY: sk_test_...\n- AWS_ACCESS: AKIA...',
+    category: 'Work',
+    createdAt: '2026-03-20T10:00:00Z',
+    updatedAt: '2026-03-20T10:00:00Z',
+    isPinned: true,
+  },
+  {
+    id: 'n2',
+    title: 'Deployment Checklist',
+    content: '1. Run tests\n2. Build project\n3. Check env variables\n4. Deploy to Vercel',
+    category: 'Reference',
+    createdAt: '2026-03-25T14:30:00Z',
+    updatedAt: '2026-03-25T14:30:00Z',
+  },
+  {
+    id: 'n3',
+    title: 'Learning Resources',
+    content: '- https://threejs-journey.com\n- https://frontendmasters.com',
+    category: 'Personal',
+    createdAt: '2026-04-01T09:00:00Z',
+    updatedAt: '2026-04-01T09:00:00Z',
+  },
+];

@@ -1,0 +1,7 @@
+# Cấu hình Supabase CLI — project đã link ref nupyjfeskzhfudnxgxoh
+# Tắt verify JWT cho ai-chat để gateway không trả 401 trước khi vào code function.
+# Xem: https://supabase.com/docs/guides/functions/function-configuration
+project_id = "nupyjfeskzhfudnxgxoh"
+
+[functions.ai-chat]
+verify_jwt = false
